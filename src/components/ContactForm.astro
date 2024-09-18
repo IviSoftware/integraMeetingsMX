@@ -27,17 +27,22 @@ const handleSubmit = async (event: any) => {
 };
 ---
 
-<section class="py-16 bg-white flex justify-center items-center" id="contact">
+<section
+  class="py-16 bg-white flex justify-center items-center"
+  id="contactanos"
+>
   <div class="max-w-6xl mx-auto px-4">
     <div
       class="grid grid-cols-1 lg:grid-cols-[45%_1fr] gap-8 lg:gap-16 items-start"
     >
       <div class="text-center lg:text-left self-center">
-        <h2 class="text-3xl font-bold mb-4 text-center">Contact</h2>
+        <h2 class="text-3xl font-bold mb-4 text-center">Contáctanos</h2>
         <p class="text-gray-600 mb-8 text-center">
-          Ready to take your events to the next level? Get in touch with us
-          today and start enjoying the benefits of working with event
-          organization experts.
+          ¿Estás listo para llevar tus eventos al siguiente nivel? <br />
+          <b>El tiempo es oro!</b>
+          <br />
+          Contáctanos hoy y experimenta los beneficios de trabajar con expertos en
+          el sector de la industria de reuniones.
         </p>
       </div>
 
@@ -45,27 +50,27 @@ const handleSubmit = async (event: any) => {
       <form class="grid grid-cols-1 gap-6" id="contactForm">
         <div>
           <label for="name" class="block text-gray-700 font-bold mb-2"
-            >Name:</label
+            >Nombre(s):</label
           >
           <input
             type="text"
             id="name"
             name="name"
             class="w-full bg-gray-100 p-3 rounded-lg"
-            placeholder="Name"
+            placeholder=""
             required
           />
         </div>
         <div>
           <label for="last-name" class="block text-gray-700 font-bold mb-2"
-            >Last Name:</label
+            >Apellidos:</label
           >
           <input
             type="text"
             id="last-name"
             name="last-name"
             class="w-full bg-gray-100 p-3 rounded-lg"
-            placeholder="Last Name"
+            placeholder=""
             required
           />
         </div>
@@ -78,39 +83,43 @@ const handleSubmit = async (event: any) => {
             id="email"
             name="email"
             class="w-full bg-gray-100 p-3 rounded-lg"
-            placeholder="Email"
+            placeholder="email@sample.com"
             required
           />
         </div>
         <div>
           <label for="company-name" class="block text-gray-700 font-bold mb-2"
-            >Company Name:</label
+            >Nombre de tu empresa:</label
           >
           <input
             type="text"
             id="company-name"
             name="company-name"
             class="w-full bg-gray-100 p-3 rounded-lg"
-            placeholder="Company Name"
+            placeholder=""
           />
         </div>
         <div>
           <label for="request" class="block text-gray-700 font-bold mb-2"
-            >Request:</label
+            >Requerimientos:</label
           >
           <textarea
             id="request"
             name="request"
             rows="4"
             class="w-full bg-gray-100 p-3 rounded-lg"
-            placeholder="Request"></textarea>
+            placeholder=""></textarea>
         </div>
         <div>
           <label class="flex items-start">
             <input type="checkbox" class="mt-1 mr-2" required />
             <span class="text-gray-700">
-              I have read the Privacy Notice and agree to the terms and
-              conditions regarding the use of this website.
+              He leído el <a
+                href="/privacy"
+                target="_blank"
+                class="text-blue-500">Aviso de Privacidad</a
+              > y estoy de acuerdo con los términos y condiciones sobre el uso de
+              este sitio web.
             </span>
           </label>
         </div>
@@ -119,7 +128,7 @@ const handleSubmit = async (event: any) => {
             type="submit"
             class="bg-orange-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-orange-600"
           >
-            Send
+            Envíar
           </button>
         </div>
       </form>
@@ -154,18 +163,18 @@ const handleSubmit = async (event: any) => {
         if (result.success) {
           Swal.fire({
             title: "Yeah!",
-            text: "Email Send",
+            text: "Correo enviado",
             icon: "info",
-            confirmButtonText: "Cool",
+            confirmButtonText: "Ok",
           }).then(() => {
             location.reload();
           });
         } else {
           Swal.fire({
             title: "Error!",
-            text: "Do you want to continue",
+            text: "Hubo un error",
             icon: "error",
-            confirmButtonText: "Cool",
+            confirmButtonText: "Ok",
           }).then(() => {
             location.reload();
           });
@@ -174,18 +183,18 @@ const handleSubmit = async (event: any) => {
         if (error instanceof Error) {
           Swal.fire({
             title: "Error!",
-            text: "Do you want to continue",
+            text: "Hubo un error",
             icon: "error",
-            confirmButtonText: "Cool",
+            confirmButtonText: "Ok",
           }).then(() => {
             location.reload();
           });
         } else {
           Swal.fire({
             title: "Error!",
-            text: "Do you want to continue",
+            text: "Hubo un error",
             icon: "error",
-            confirmButtonText: "Cool",
+            confirmButtonText: "Ok",
           }).then(() => {
             location.reload();
           });

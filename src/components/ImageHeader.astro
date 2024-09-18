@@ -29,7 +29,21 @@ import "animate.css";
     padding: 16px;
     color: white;
     z-index: 10;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+  }
+
+  .text-content {
     max-width: 950px;
+  }
+
+  .text-title {
+    display: inline;
+    max-width: 1500px;
+    margin-bottom: 30px;
   }
 </style>
 
@@ -41,12 +55,12 @@ import "animate.css";
   </div>
   <div class="text-header">
     <h2
-      class="text-xl text-center md:text-right md:pr-6 lg:text-7xl font-bold mb-2 lg:mb-4 cssanimation sequence"
+      class="text-title text-xl text-center md:text-right md:pr-6 lg:text-7xl font-bold mb-2 lg:mb-4 cssanimation sequence"
     >
       {title}
     </h2>
     <p
-      class="text-lg text-center md:text-right md:pr-6 lg:text-xl animate__animated animate__bounceInRight"
+      class="text-content text-lg text-center md:text-right md:pr-6 lg:text-xl animate__animated animate__bounceInRight"
     >
       {text}
     </p>
