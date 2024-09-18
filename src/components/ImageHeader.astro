@@ -33,7 +33,7 @@ import "animate.css";
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: end;
+    align-items: center;
   }
 
   .text-content {
@@ -41,9 +41,18 @@ import "animate.css";
   }
 
   .text-title {
-    display: inline;
     max-width: 1500px;
     margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    .text-title {
+      display: inline;
+    }
+
+    .text-header {
+      align-items: end;
+    }
   }
 </style>
 
