@@ -148,7 +148,7 @@ const handleSubmit = async (event: any) => {
 
       try {
         Swal.fire({
-          title: "sending...",
+          title: "Enviando...",
         });
         const response = await fetch(
           "https://cautiva.com.mx/apiSendEmailIntegraEU.php",
@@ -162,7 +162,7 @@ const handleSubmit = async (event: any) => {
 
         if (result.success) {
           Swal.fire({
-            title: "Yeah!",
+            title: "¡Listo!",
             text: "Correo enviado",
             icon: "info",
             confirmButtonText: "Ok",
